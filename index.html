@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Резюме</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="resume.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="util.min.js"></script>
+<script src="carousel.min.js"></script>
+<link rel="stylesheet" href="magnificpopup/magnific-popup.css">
+<script src="magnificpopup/jquery.magnific-popup.min.js"></script>
+<script>
+function displaylightbox(url, options)
+{
+   options.items = { src: url };
+   options.type = 'iframe';
+   $.magnificPopup.open(options);
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#LayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid2').offset().top }, 600, 'linear');
+   });
+   $("a[href*='#LayoutGrid3']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid3').offset().top }, 600, 'linear');
+   });
+   $("a[href*='#LayoutGrid4']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid4').offset().top }, 600, 'linear');
+   });
+   $("#progressbar_html").progressbar(
+   {
+      value: 90,
+      change: function() 
+      {
+         $("#progressbar_html-label").text($(this).progressbar('value') + '%');
+      }
+   });
+   $("#progressbar_uidesign").progressbar(
+   {
+      value: 80,
+      change: function() 
+      {
+         $("#progressbar_uidesign-label").text($(this).progressbar('value') + '%');
+      }
+   });
+   $("#progressbar_jquery").progressbar(
+   {
+      value: 60,
+      change: function() 
+      {
+         $("#progressbar_jquery-label").text($(this).progressbar('value') + '%');
+      }
+   });
+   $("#progressbar_php").progressbar(
+   {
+      value: 75,
+      change: function() 
+      {
+         $("#progressbar_php-label").text($(this).progressbar('value') + '%');
+      }
+   });
+   $("a[href*='#LayoutGrid5']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid5').offset().top }, 600, 'linear');
+   });
+   $("#ThemeableMenu1").menu(
+   {
+      icons: { submenu: 'ui-arrow' },
+      position: { using: setSubMenu }
+   });
+   function setSubMenu(position, elements)
+   {
+      var options = { of: elements.target.element };
+      if (elements.element.element.parent().parent().attr('id') === 'ThemeableMenu1')
+      {
+         options.my = 'left top';
+         options.at = 'right top';
+      }
+      else
+      {
+         options.my = 'left top';
+         options.at = 'right top';
+      }
+      elements.element.element.position(options);
+   }
+   $("#Carousel1").bootstrapcarousel({interval:3000, pause: false});
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   var $progressbars = $('.ui-progressbar');
+   
+   $progressbars.each(function() 
+   {
+     var $obj = $(this);
+     $obj.data('value', $obj.progressbar('option', 'value'));
+     $obj.data('done', false);
+     $obj.progressbar('option', 'value', 0);
+   });
+   $(window).bind('scroll', function() 
+   {
+      $progressbars.each(function() 
+      {
+         var $obj = $(this);
+         if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+         {
+            $obj.data('done', true);
+            $obj.animate({scroll: 1}, 
+            { 
+               duration: 3000, 
+               step: function(now) 
+               {
+                  var $obj = $(this);
+                  var val = Math.round($obj.data('value') * now);
+                  $obj.progressbar('option', 'value', val);
+               }
+            });
+         }
+      });
+   }).triggerHandler('scroll');
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1">
+<h1 id="Heading1">Резюме "Личный помощник"</h1>
+</div>
+
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1">
+<ul id="ThemeableMenu1">
+<li><div><a href="#LayoutGrid2" target="_self">&#1054;&#1073;&#1086;&nbsp;&#1084;&#1085;&#1077;</a></div></li>
+<li><div><a href="#LayoutGrid4" target="_self">&#1053;&#1072;&#1074;&#1099;&#1082;&#1080;</a></div></li>
+<li><div><a href="#LayoutGrid5" target="_self">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;&nbsp;&#1088;&#1072;&#1073;&#1086;&#1090;</a></div></li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_IconFont1">
+<a href="./Павлов Даниил Александрович (1).doc" title="&#1057;&#1082;&#1072;&#1095;&#1072;&#1090;&#1100; &#1088;&#1077;&#1079;&#1102;&#1084;&#1077;"><div id="IconFont1"><i class="material-icons">&#xe2c4;</i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image1">
+<img src="images/qseV7nJitGY.jpg" id="Image1" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text1">
+<span style="color:#696969;font-family:Arial;font-size:53px;"><strong>Павлов Даниил <br></strong></span><span style="color:#696969;font-family:Arial;font-size:21px;"><strong>5 августа 2000 г.<br></strong></span>
+</div>
+<div id="wb_Text3">
+<span style="color:#696969;font-family:Arial;font-size:16px;"><strong>master.2000@mail.ru <br><br></strong></span><span style="color:#696969;font-family:Arial;font-size:15px;">Здравствуйте, меня зовут Даниил и я начинающий любитель-фрилансер в области IT, если вы посетили мою страницу, то вероятно всего, вы нуждаетесь в услугах верстки, фотомонтажа и прочего, у меня данные услуги по заниженным ценам, плюс доступны торги, так как в силу своей молодости и потому малого опыта, я не могу брать с вас космические суммы, как это делают профессионалы. В данном резюме, вы возможно сможете увидеть, те качества, которые требуются вам в вашем личном помощнике, от работы в офисных программах до создания сайта и администрирование его. Работу, рассматриваю исключительно удалённую, благо сейчас, в век цифровых технологий, можно поддерживать связь, через любое устройство. Желательно со свободным графиком работы или же по проектная работа. Отдельно выделю свои, главные качества как личного помощника: Владею офисными программами (PowerPoint, Excel, Word), Могу обработать фотографии в программе &quot;Adobe Photoshop&quot; или смонтировать видеоролик в программах &quot;Adobe Premiere Pro&quot; &quot;Adobe After Effects&quot;, Визуализировать и от рендерить, простую 3d модель в Blender или же отрисовать макет в SketchUp, Создам сайт под ключ в различных CMS (Wordpress, Joomla, Opencart, 1С-Битрикс) и буду администрировать его, по мимо всего, могу сверстать сайт вручную по вашему PSD макету. За ранее оговорюсь, что&nbsp; вышеперечисленными качествами, я владею, не на уровне профессионала, думаю, что по понятным причинам, однако если вам необходим личный помощник в решение одной или нескольких вышеперечисленных задач, жду вашего сообщения).</span><span style="color:#696969;font-family:Arial;font-size:16px;"><br></span>
+</div>
+<div id="wb_FontAwesomeIcon1">
+<a href="https://vk.com/thedandarak0" target="_blank" title="&#1042;&#1082;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1077;"><div id="FontAwesomeIcon1"><i class="fa fa-vk"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon2">
+<a href="https://api.whatsapp.com/send?phone=79250841676" target="_blank" title="Whatsapp"><div id="FontAwesomeIcon2"><i class="fa fa-whatsapp"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<table id="Table1">
+<tr>
+<td class="cell0"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#696969;font-family:Arial;font-size:24px;"><strong>Опыт работы</strong></span></td>
+<td class="cell1"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#3E78B3;font-family:Arial;font-size:15px;"><strong>Администратор сайта (Февраль 2018-Февраль 2019)</strong></span><span style="color:#000000;font-family:Arial;font-size:15px;"><br></span><span style="color:#696969;font-family:Arial;font-size:15px;">Компания:Сантехникасити<br>Город: Клин<br>Обязанности: Полное администрирование интернет магазина<br>(Добавление карточек товара; исправление ошибок на сайте; составление семантического ядра; добавление сайта в каталоги и оптимизация его для поисковых систем; наращивание ссылочной массы.)<br></span></td>
+</tr>
+<tr>
+<td class="cell0"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#696969;font-family:Arial;font-size:24px;"><strong>Гражданство</strong></span></td>
+<td class="cell1"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#3E78B3;font-family:Arial;font-size:15px;"><strong>Россия</strong></span></td>
+</tr>
+<tr>
+<td class="cell0"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#696969;font-family:Arial;font-size:24px;"><strong>Знание языков</strong></span></td>
+<td class="cell1"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#3E78B3;font-family:Arial;font-size:15px;"><strong>Русский — Родной</strong></span></td>
+</tr>
+<tr>
+<td class="cell0"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#696969;font-family:Arial;font-size:24px;"><strong>Среднее специальное образование<br></strong></span></td>
+<td class="cell1"><span style="color:#000000;font-family:'Arial CYR';font-size:13px;"> </span><span style="color:#3E78B3;font-family:Arial;font-size:15px;"><strong>ГБПОУ MO &quot;Колледж &quot;Подмосковье&quot;<br></strong></span><span style="color:#696969;font-family:Arial;font-size:15px;">Год окончания: 2020<br>Специальность:МОЦИ, Мастер обработки цифровой информации<br></span></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading3">
+<h1 id="Heading3">Навыки</h1>
+</div>
+<label for="" id="Label5">Office (Powerpoint, Excel, Word)</label>
+<div id="progressbar_html" >
+<div id="progressbar_html-label">90%</div>
+</div>
+<label for="" id="Label6">Веб программирование (Разработка сайтов)</label>
+<div id="progressbar_uidesign" >
+<div id="progressbar_uidesign-label">80%</div>
+</div>
+<label for="" id="Label7">3D моделирование</label>
+<div id="progressbar_jquery" >
+<div id="progressbar_jquery-label">60%</div>
+</div>
+<label for="" id="Label8">Фото/Видео монтаж и обработка</label>
+<div id="progressbar_php" >
+<div id="progressbar_php-label">75%</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2">
+<h1 id="Heading2">Примеры работ</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Carousel1">
+<div id="Carousel1" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#Carousel1" data-slide-to="0" class="active"></li>
+<li data-target="#Carousel1" data-slide-to="1"></li>
+<li data-target="#Carousel1" data-slide-to="2"></li>
+<li data-target="#Carousel1" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="carousel-innerframe">
+<a href="javascript:displaylightbox('./images/паркет2(дизайн1) (1).png',{})" target="_self">
+<picture id="wb_Picture4">
+<img src="images/паркет2(дизайн1) (1).png" id="Picture4" alt="" srcset="">
+</picture>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<a href="javascript:displaylightbox('./images/Монтажная область 1.png',{})" target="_self">
+<picture id="wb_Picture3">
+<img src="images/Монтажная область 1.png" id="Picture3" alt="" srcset="">
+</picture>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<a href="https://xn--80aaombalvb0bhgh9a.xn--p1ai/">
+<picture id="wb_Picture2">
+<img src="images/Screenshot_1.png" id="Picture2" alt="" srcset="">
+</picture>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<a href="javascript:displaylightbox('./images/Work.jpg',{})" rel="nofollow" target="_self">
+<picture id="wb_Picture1">
+<img src="images/Work.png" id="Picture1" alt="" srcset="">
+</picture>
+</a>
+</div>
+</div>
+</div>
+<a class="carousel-item-left carousel-control" href="#Carousel1" role="button" data-slide="prev">
+<img alt="Previous" class="carousel-control-prev-icon" aria-hidden="true" style="border-width:0" src="images/carousel_back.png"><span class="sr-only">Previous</span>
+</a>
+<a class="carousel-item-right carousel-control" href="#Carousel1" role="button" data-slide="next">
+<img alt="Next" class="carousel-control-next-icon" aria-hidden="true" style="border-width:0" src="images/carousel_next.png"><span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<script src="js/affix.min.js"></script>
+<script src="js/affixHeader.js"></script>
+</body>
+</html>
